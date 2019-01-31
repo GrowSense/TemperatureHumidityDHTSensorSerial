@@ -1,5 +1,6 @@
 DIR=$PWD
 
-echo "Initializing TemperatureHumidityDHTSensorSerial project"
+echo "Initializing project"
 
+sh init-sketch.sh
 sh init-tests.sh
