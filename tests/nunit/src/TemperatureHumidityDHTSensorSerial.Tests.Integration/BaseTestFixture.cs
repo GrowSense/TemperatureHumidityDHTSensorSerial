@@ -62,7 +62,7 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 
 		public string GetDevicePort()
 		{
-			var devicePort = Environment.GetEnvironmentVariable("MONITOR_PORT");
+			var devicePort = Environment.GetEnvironmentVariable("TEMPERATURE_HUMIDITY_DHT_MONITOR_PORT");
 
 			if (String.IsNullOrEmpty(devicePort))
 				devicePort = "/dev/ttyUSB0";
@@ -75,7 +75,7 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 
 		public string GetSimulatorPort()
 		{
-			var simulatorPort = Environment.GetEnvironmentVariable("MONITOR_SIMULATOR_PORT");
+			var simulatorPort = Environment.GetEnvironmentVariable("TEMPERATURE_HUMIDITY_DHT_MONITOR_SIMULATOR_PORT");
 
 			if (String.IsNullOrEmpty(simulatorPort))
 				simulatorPort = "/dev/ttyUSB1";
