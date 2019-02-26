@@ -39,7 +39,7 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 
         public int ResetTriggerPin = 4;
 
-        public string IrrigatorStartText = "Starting temperature humidity monitor";
+        public string LightPRMonitorStartText = "Starting temperature humidity monitor";
 
         public TimeoutHelper Timeout = new TimeoutHelper ();
 
@@ -193,7 +193,7 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
             ConnectDevice ();
 
             // Ensure the irrigator restarted
-            WaitForText (IrrigatorStartText);
+            WaitForText (LightPRMonitorStartText);
         }
 
         #endregion
