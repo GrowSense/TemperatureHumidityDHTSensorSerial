@@ -258,9 +258,6 @@ void setTemperatureHumidityDHTSensorReadingInterval(long newValue)
   temperatureHumidityDHTSensorReadingIntervalInSeconds = newValue; 
 
   serialOutputIntervalInSeconds = newValue;
-  
-  if (secondsToMilliseconds(newValue) <= delayAfterTurningTemperatureHumidityDHTSensorOn)
-    turnTemperatureHumidityDHTSensorOn();
 }
 
 long getTemperatureHumidityDHTSensorReadingInterval()
