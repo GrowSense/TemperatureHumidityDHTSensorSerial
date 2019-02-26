@@ -108,6 +108,8 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 
             DeviceIsEnabled = true;
 
+            ReadFromDeviceAndOutputToConsole ();
+
             Console.WriteLine ("");
         }
 

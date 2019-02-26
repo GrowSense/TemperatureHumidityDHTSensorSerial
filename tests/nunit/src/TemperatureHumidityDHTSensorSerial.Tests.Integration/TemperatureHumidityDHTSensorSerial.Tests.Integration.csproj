@@ -47,8 +47,6 @@
     <Compile Include="HardwareTestHelper.cs" />
     <Compile Include="GreenSenseHardwareTestHelper.cs" />
     <Compile Include="ReadIntervalCommandTestHelper.cs" />
-    <Compile Include="TemperatureHumidityDHTSensorPowerTestFixture.cs" />
-    <Compile Include="TemperatureHumidityDHTSensorPowerTestHelper.cs" />
     <Compile Include="SerialOutputTimeTestFixture.cs" />
     <Compile Include="SerialOutputTimeTestHelper.cs" />
     <Compile Include="TimeoutHelper.cs" />
