@@ -155,10 +155,15 @@ void takeTemperatureHumidityDHTSensorReading()
       if (sensorGetsTurnedOff)
         lastTemperatureHumidityDHTSensorReadingTime = lastTemperatureHumidityDHTSensorReadingTime - delayAfterTurningTemperatureHumidityDHTSensorOn;
         
-        
-
       humidityValue = dht.getHumidity();
+    
+      if (isnan(humidityValue))
+        humidityValue = 0;
+      
       temperatureValue = dht.getTemperature();
+
+      if (isnan(temperatureValue))
+        temperatureValue = 0;
 
       temperatureHumidityDHTSensorReadingHasBeenTaken = true;
 
