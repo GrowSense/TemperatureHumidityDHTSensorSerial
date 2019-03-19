@@ -4,6 +4,8 @@ BRANCH=$(git branch | sed -n -e 's/^\* \(.*\)/\1/p')
 
 if [ "$BRANCH" = "dev" ]
 then
+    git pull origin dev
+    
     echo "Incrementing version"
 
     CURRENT_VERSION=$(cat buildnumber.txt)
