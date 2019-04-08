@@ -117,7 +117,7 @@ void serialPrintData()
       Serial.print("I:");
       Serial.print(temperatureHumidityDHTSensorReadingIntervalInSeconds);
       Serial.print(";");
-      Serial.print("Z:");
+      Serial.print("V:");
       Serial.print(VERSION);
       Serial.print(";;");
       Serial.println();
