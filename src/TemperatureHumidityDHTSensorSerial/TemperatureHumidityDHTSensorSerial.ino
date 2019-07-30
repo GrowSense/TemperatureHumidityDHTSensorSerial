@@ -10,6 +10,7 @@
 #define SERIAL_MODE_QUERYSTRING 2
 
 #define VERSION "1-0-0-0"
+#define BOARD_TYPE "uno"
 
 int serialMode = SERIAL_MODE_CSV;
 
@@ -19,6 +20,8 @@ void setup()
 
   Serial.println("Starting temperature humidity monitor");
 
+  serialPrintDeviceInfo();
+  
   setupTemperatureHumidityDHTSensor();
 
   serialOutputIntervalInSeconds = temperatureHumidityDHTSensorReadingIntervalInSeconds;
@@ -62,6 +65,9 @@ void checkCommand()
 
     switch (letter)
     {
+      case '#':
+        serialPrintDeviceInfo();
+        break;
       case 'I':
         setTemperatureHumidityDHTSensorReadingInterval(msg);
         break;
@@ -77,6 +83,22 @@ void checkCommand()
     forceSerialOutput();
   }
   delay(1);
+}
+
+void serialPrintDeviceInfo()
+{
+  Serial.println("");
+  Serial.println("-- Start Device Info");
+  Serial.println("Family: GreenSense");
+  Serial.println("Group: monitor");
+  Serial.println("Project: TemperatureHumidityDHTSensorSerial");
+  Serial.print("Board: ");
+  Serial.println(BOARD_TYPE);
+  Serial.print("Version: ");
+  Serial.println(VERSION);
+  Serial.println("ScriptCode: temperature-humidity-monitor");
+  Serial.println("-- End Device Info");
+  Serial.println("");
 }
 
 /* Settings */
