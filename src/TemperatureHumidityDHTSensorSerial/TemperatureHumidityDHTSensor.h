@@ -4,7 +4,7 @@
 extern float temperatureValue;
 extern float humidityValue;
 
-extern long lastTemperatureHumidityDHTSensorReadingTime;
+extern unsigned long lastTemperatureHumidityDHTSensorReadingTime;
 extern long temperatureHumidityDHTSensorReadingIntervalInSeconds;
 extern int temperatureHumidityDHTSensorReadIntervalIsSetFlagAddress;
 
@@ -12,7 +12,7 @@ extern int drySoilMoistureCalibrationValue;
 extern int wetSoilMoistureCalibrationValue;
 
 extern bool temperatureHumidityDHTSensorIsOn;
-extern long lastSensorOnTime;
+extern unsigned long lastSensorOnTime;
 extern int delayAfterTurningSensorOn;
 extern bool temperatureHumidityDHTSensorReadingHasBeenTaken;
 

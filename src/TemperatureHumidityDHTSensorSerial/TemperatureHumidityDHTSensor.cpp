@@ -15,12 +15,12 @@ DHT dht;
 #define temperatureHumidityDHTSensorPowerPin 12
 
 bool temperatureHumidityDHTSensorIsOn = true;
-long lastSensorOnTime = 0;
+unsigned long lastSensorOnTime = 0;
 int delayAfterTurningTemperatureHumidityDHTSensorOn = 3 * 1000;
 
 bool temperatureHumidityDHTSensorReadingHasBeenTaken = false;
 long temperatureHumidityDHTSensorReadingIntervalInSeconds = 5;
-long lastTemperatureHumidityDHTSensorReadingTime = 0; // Milliseconds
+unsigned long lastTemperatureHumidityDHTSensorReadingTime = 0; // Milliseconds
 
 float temperatureValue = 0;
 float humidityValue = 0;
