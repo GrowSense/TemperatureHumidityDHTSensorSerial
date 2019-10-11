@@ -13,9 +13,16 @@ if [ ! "$TO_TEXT" ]; then
 	exit 1
 fi
 
+mkdir -p ../_tmp/
+mv .git ../_tmp/
+
 echo "Changing..."
 echo "From: $FROM_TEXT"
 echo "To: $TO_TEXT"
+
+echo ""
+echo "Replacing in file contents..."
+find . -type f -exec sed -i "s/$FROM_TEXT/$TO_TEXT/g" {} +
 
 echo ""
 echo "Replacing in file and folder names..."
@@ -29,8 +36,7 @@ rename "s/$FROM_TEXT/$TO_TEXT/g" $f -v
 
 done
 
-echo ""
-echo "Replacing in file contents..."
-find . -type f -exec sed -i "s/$FROM_TEXT/$TO_TEXT/g" {} +
+
+mv ../_tmp/.git .git
 
 echo "Replace complete"
