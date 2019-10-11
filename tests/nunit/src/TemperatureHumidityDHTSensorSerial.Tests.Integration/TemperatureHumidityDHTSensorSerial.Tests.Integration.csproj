@@ -45,7 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadIntervalCommandTestFixture.cs" />
     <Compile Include="HardwareTestHelper.cs" />
-    <Compile Include="GreenSenseHardwareTestHelper.cs" />
+    <Compile Include="GrowSenseHardwareTestHelper.cs" />
     <Compile Include="ReadIntervalCommandTestHelper.cs" />
     <Compile Include="SerialOutputTimeTestFixture.cs" />
     <Compile Include="SerialOutputTimeTestHelper.cs" />

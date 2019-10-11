@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 {
-    public class GreenSenseHardwareTestHelper : HardwareTestHelper
+    public class GrowSenseHardwareTestHelper : HardwareTestHelper
     {
         public int SoilMoistureSimulatorPin = 9;
         public int SoilMoistureSimulatorPowerPin = 3;
@@ -17,7 +17,7 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 
         public bool CalibrationIsReversedByDefault = true;
 
-        public GreenSenseHardwareTestHelper ()
+        public GrowSenseHardwareTestHelper ()
         {
         }
 

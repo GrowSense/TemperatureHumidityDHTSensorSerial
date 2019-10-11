@@ -2,7 +2,7 @@
 
 namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
 {
-	public class ReadIntervalEEPROMTestHelper : GreenSenseHardwareTestHelper
+	public class ReadIntervalEEPROMTestHelper : GrowSenseHardwareTestHelper
 	{
 		public int ReadInterval = 3;
 
