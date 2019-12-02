@@ -1,5 +1,5 @@
-#ifndef SOILMOISTURESENSOR_H_
-#define SOILMOISTURESENSOR_H_
+#ifndef TEMPERATUREHUMIDITYDHTSENSOR_H_
+#define TEMPERATUREHUMIDITYDHTSENSOR_H_
 
 extern float temperatureValue;
 extern float humidityValue;
@@ -68,4 +68,4 @@ void restoreDefaultTemperatureHumidityDHTSensorSettings();
 void restoreDefaultTemperatureHumidityDHTSensorReadingIntervalSettings();
 void restoreDefaultCalibrationSettings();
 #endif
-/* SOILMOISTURESENSOR_H_ */
+/* TEMPERATUREHUMIDITYDHTSENSOR_H_ */

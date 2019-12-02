@@ -2,9 +2,10 @@
 #include <EEPROM.h>
 #include <DHT.h>
 
-#include <duinocom.h>
+#include <duinocom2.h>
 
 #include "Common.h"
+#include "EEPROMHelper.h"
 #include "TemperatureHumidityDHTSensor.h"
 
 DHT dht;

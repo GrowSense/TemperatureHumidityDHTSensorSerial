@@ -9,6 +9,8 @@
     <AssemblyName>TemperatureHumidityDHTSensorSerial.Tests.Integration</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseMSBuildEngine>False</UseMSBuildEngine>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,8 +52,8 @@
     <Compile Include="SerialOutputTimeTestFixture.cs" />
     <Compile Include="SerialOutputTimeTestHelper.cs" />
     <Compile Include="TimeoutHelper.cs" />
-    <Compile Include="ReadIntervalEEPROMTestFixture.cs" />
-    <Compile Include="ReadIntervalEEPROMTestHelper.cs" />
+    <Compile Include="DeviceNameCommandTestFixture.cs" />
+    <Compile Include="SerialCommandTestHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
