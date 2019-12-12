@@ -93,7 +93,7 @@ void takeTemperatureHumidityDHTSensorReading()
   
   	bool sensorIsOffAndNeedsToBeTurnedOn = !temperatureHumidityDHTSensorIsOn && sensorGetsTurnedOff;
   
-  	bool postSensorOnDelayHasPast = lastSensorOnTime + delayAfterTurningTemperatureHumidityDHTSensorOn < millis();
+  	bool postSensorOnDelayHasPast = millis() - lastSensorOnTime > delayAfterTurningTemperatureHumidityDHTSensorOn;
   
   	bool temperatureHumidityDHTSensorIsOnAndReady = temperatureHumidityDHTSensorIsOn && (postSensorOnDelayHasPast || !sensorGetsTurnedOff);
 
@@ -251,6 +251,9 @@ void setTemperatureHumidityDHTSensorReadingInterval(long newValue)
     Serial.print("Set sensor reading interval: ");
     Serial.println(newValue);
   }
+  
+  if (newValue < 3)
+    newValue = 3;
 
   EEPROMWriteLong(temperatureHumidityDHTSensorReadingIntervalAddress, newValue);
 
