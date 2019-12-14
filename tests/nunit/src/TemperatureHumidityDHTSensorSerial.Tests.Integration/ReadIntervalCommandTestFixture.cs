@@ -6,10 +6,10 @@ namespace TemperatureHumidityDHTSensorSerial.Tests.Integration
   public class ReadIntervalCommandTestFixture : BaseTestFixture
   {
     [Test]
-    public void Test_SetReadIntervalCommand_2Seconds ()
+    public void Test_SetReadIntervalCommand_3Seconds ()
     {
       using (var helper = new ReadIntervalCommandTestHelper()) {
-        helper.ReadingInterval = 2;
+        helper.ReadingInterval = 3;
 
         helper.DevicePort = GetDevicePort ();
         helper.DeviceBaudRate = GetDeviceSerialBaudRate ();
