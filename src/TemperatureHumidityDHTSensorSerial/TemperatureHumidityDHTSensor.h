@@ -1,24 +1,22 @@
 #ifndef TEMPERATUREHUMIDITYDHTSENSOR_H_
 #define TEMPERATUREHUMIDITYDHTSENSOR_H_
 
-extern float temperatureValue;
-extern float humidityValue;
+extern int temperatureValue;
+extern int humidityValue;
 
 extern unsigned long lastTemperatureHumidityDHTSensorReadingTime;
 extern long temperatureHumidityDHTSensorReadingIntervalInSeconds;
 extern int temperatureHumidityDHTSensorReadIntervalIsSetFlagAddress;
+extern int minimumTemperatureHumidityDHTSensorReadingIntervalInSeconds;
 
 extern int drySoilMoistureCalibrationValue;
 extern int wetSoilMoistureCalibrationValue;
 
-extern bool temperatureHumidityDHTSensorIsOn;
+extern bool temperatureHumidityDHTSensorIsEnabled;
 extern unsigned long lastSensorOnTime;
-extern int delayAfterTurningSensorOn;
 extern bool temperatureHumidityDHTSensorReadingHasBeenTaken;
 
 void setupTemperatureHumidityDHTSensor();
-
-void setupCalibrationValues();
 
 void setupTemperatureHumidityDHTSensorReadingInterval();
 
@@ -28,44 +26,18 @@ void turnTemperatureHumidityDHTSensorOff();
 
 void takeTemperatureHumidityDHTSensorReading();
 
-double getAverageTemperatureHumidityDHTSensorReading();
+void setTemperature(char* msg);
+void setTemperature(long temperature);
 
-double calculateSoilMoistureLevel(int temperatureHumidityDHTSensorReading);
-
-void setEEPROMIsCalibratedFlag();
+void setHumidity(char* msg);
+void setHumidity(long humidity);
 
 void setTemperatureHumidityDHTSensorReadingInterval(char* msg);
 void setTemperatureHumidityDHTSensorReadingInterval(long readInterval);
 
 long getTemperatureHumidityDHTSensorReadingInterval();
 
-void setEEPROMTemperatureHumidityDHTSensorReadingIntervalIsSetFlag();
-void removeEEPROMTemperatureHumidityDHTSensorReadingIntervalIsSetFlag();
-
-void setDrySoilMoistureCalibrationValue(char* msg);
-
-void setDrySoilMoistureCalibrationValueToCurrent();
-
-void setDrySoilMoistureCalibrationValue(int drySoilMoistureCalibrationValue);
-
-void setWetSoilMoistureCalibrationValue(char* msg);
-
-void setWetSoilMoistureCalibrationValueToCurrent();
-
-void setWetSoilMoistureCalibrationValue(int wetSoilMoistureCalibrationValue);
-
-void reverseSoilMoistureCalibrationValues();
-
-int getDrySoilMoistureCalibrationValue();
-
-int getWetSoilMoistureCalibrationValue();
-
-void setEEPROMIsCalibratedFlag();
-
-void removeEEPROMIsCalibratedFlag();
-
 void restoreDefaultTemperatureHumidityDHTSensorSettings();
 void restoreDefaultTemperatureHumidityDHTSensorReadingIntervalSettings();
-void restoreDefaultCalibrationSettings();
 #endif
 /* TEMPERATUREHUMIDITYDHTSENSOR_H_ */

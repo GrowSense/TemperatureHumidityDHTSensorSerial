@@ -41,10 +41,10 @@ void serialPrintData()
     Serial.print(deviceName);
     Serial.print(";");
     Serial.print("T:");
-    Serial.print(temperatureValue);
+    Serial.print((int)temperatureValue);
     Serial.print(";");
     Serial.print("H:");
-    Serial.print(humidityValue);
+    Serial.print((int)humidityValue);
     Serial.print(";");
     Serial.print("I:");
     Serial.print(temperatureHumidityDHTSensorReadingIntervalInSeconds);
