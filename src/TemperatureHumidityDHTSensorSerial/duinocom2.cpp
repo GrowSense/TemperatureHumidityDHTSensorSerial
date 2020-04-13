@@ -39,8 +39,7 @@ bool checkMsgReady()
 
       isMsgReady = true;
       
-      for (int i = msgPosition; i < MAX_MSG_LENGTH; i++)
-        msgBuffer[i] = '\0';
+      msgBuffer[msgPosition] = '\0';
         
       msgPosition = 0;
 
@@ -60,8 +59,9 @@ bool checkMsgReady()
     }
     else // Message bytes
     {
-      if (msgPosition == 0)
-        clearMsg(msgBuffer);
+      // TODO: Remove if not needed. This shouldn't be needed because adding '\0' at the end of the message should be sufficient
+      //if (msgPosition == 0)
+      //  clearMsg(msgBuffer);
 
       msgBuffer[msgPosition] = b;
       msgLength = msgPosition+1;
@@ -75,7 +75,8 @@ bool checkMsgReady()
       //}
     }
 
-    delay(1);
+    // TODO: Remove if not needed.
+    //delay(1);
   }
 
   return isMsgReady;
@@ -114,10 +115,12 @@ void printMsg(char msg[MAX_MSG_LENGTH])
 
 void clearMsg(char msgBuffer[MAX_MSG_LENGTH])
 {
-  for (int i = 0; i < 10; i++)
-  {
-    msgBuffer[i] = '\0';
-  }
+  // TODO: Remove if not needed
+  //for (int i = 0; i < MAX_MSG_LENGTH; i++)
+  //{
+  //  msgBuffer[i] = '\0';
+  //}
+  msgBuffer[0] = '\0';
 }
 
 char getCmdChar(char msg[MAX_MSG_LENGTH], int characterPosition)
